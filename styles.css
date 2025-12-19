@@ -63,6 +63,7 @@ body{
   align-items:center;
   padding:4px 12px;
   transform:translateX(0);
+  /* scroll right → left (leftward movement) */
   animation: ticker-left 10s linear infinite;
 }
 .ticker-track span{
