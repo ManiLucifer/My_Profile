@@ -10,11 +10,18 @@
 /* Base */
 *{box-sizing:border-box}
 html,body{height:100%}
-body {
-  margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background: linear-gradient(180deg, #B3E5FC, #87CEFA); /* Light blue gradient */
-  line-height: 1.5;
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+  background:
+    radial-gradient(1200px 400px at 10% 10%, rgba(183,28,28,0.08), transparent 10%),
+    radial-gradient(900px 300px at 90% 90%, rgba(224,165,0,0.04), transparent 10%),
+    linear-gradient(180deg,var(--bg-dark),#070709 60%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  padding-bottom:4rem;
 }
 
 .container{
