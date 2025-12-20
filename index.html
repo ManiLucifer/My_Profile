@@ -170,12 +170,56 @@
   </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="container">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:kallurimanikanta9@gmail.com">kallurimanikanta9@gmail.com</a></p>
+          <script>
+  function handleContact(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const fullMessage =
+      `Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+
+    // EMAIL
+    window.open(
+      `mailto:kallurimanikanta9@gmail.com?subject=Portfolio Contact&body=${fullMessage}`
+    );
+
+    // WHATSAPP (replace with your number, country code mandatory)
+    window.open(
+      `https://wa.me/919133022208?text=${fullMessage}`,
+      "_blank"
+    );
+  }
+          </script>
+<section id="contact" class="section" aria-labelledby="contact-title">
+  <div class="container">
+    <h3 id="contact-title">Contact</h3>
+
+    <form class="contact-form" onsubmit="handleContact(event)">
+      <div class="field">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" required />
       </div>
-    </section>
+
+      <div class="field">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" required />
+      </div>
+<div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Contact Me</button>
+    </form>
+  </div>
+  
+  <p>Email: <a href="mailto:kallurimanikanta9@gmail.com">kallurimanikanta9@gmail.com</a></p>
+      
+</section>
+
   </main>
 
   <footer class="site-footer">
