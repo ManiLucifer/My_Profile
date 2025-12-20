@@ -17,16 +17,32 @@
 
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="logo">MANIKANTA KALLURI</h1>
-
-      <nav class="nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <div class="container header-inner">
+    <h1 class="logo">MANIKANTA KALLURI</h1>
+    
+    <!-- Desktop nav - always visible -->
+    <nav class="nav desktop-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    
+    <!-- Mobile hamburger - hidden by CSS -->
+    <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <!-- Mobile menu dropdown - hidden by CSS -->
+    <nav class="nav mobile-nav" id="mobile-nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
   </header>
 
   <main>
