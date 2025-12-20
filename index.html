@@ -176,34 +176,40 @@
     <h3>Contact Me</h3>
 
     <form id="contact-form"
-      action="https://formsubmit.co/kallurimanikanta9@gmail.com"
-      method="POST">
+          action="https://formsubmit.co/YOUR_EMAIL_HERE"
+          method="POST">
 
-  <div class="field-row">
-    <label for="name">Name</label>
-    <input id="name" name="name" type="text" required>
-  </div>
+      <!-- FormSubmit options -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
-  <div class="field-row">
-    <label for="email">Email</label>
-    <input id="email" name="email" type="email" required>
-  </div>
+      <div class="field-row">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
 
-  <div class="field-row">
-    <label for="phone">Phone (optional)</label>
-    <input id="phone" name="phone" type="tel">
-  </div>
+      <div class="field-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
 
-  <div class="field-row">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-  </div>
+      <div class="field-row">
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="phone" type="tel">
+      </div>
 
-  <button class="btn" type="submit">Send Message</button>
-  <p id="form-success" class="form-success">Message sent ✅</p>
-</form>
+      <div class="field-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <button class="btn" type="submit">Send Message</button>
+
+      <!-- success animation text -->
+      <p id="form-success" class="form-success">Message sent ✅</p>
+    </form>
   </div>
-          </section>
+</section>
 
           
   </main>
@@ -220,30 +226,14 @@
   const successMsg = document.getElementById('form-success');
 
   form.addEventListener('submit', function (e) {
-    e.preventDefault();
+    // let the form really submit to FormSubmit:
+    // it will handle sending the email to your inbox. [web:254]
+    successMsg.classList.add('show');
 
-    // If required fields fail, show browser validation and stop.
-    if (!form.checkValidity()) {
-      form.reportValidity();   // shows error messages near fields
-      return;
-    }
-
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-    })
-    .then(() => {
-      form.reset();
-      successMsg.classList.add('show');
-      setTimeout(() => successMsg.classList.remove('show'), 4000);
-    })
-    .catch(() => {
-      alert('Failed to send message. Please try again.');
-    });
+    // hide again after 4 seconds (optional)
+    setTimeout(() => successMsg.classList.remove('show'), 4000);
   });
-            </script>
+</script>
           
 </body>
         </html>
