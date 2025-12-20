@@ -10,68 +10,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="src/CSS/styles.css" />
-
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  
 </head>
 
 <body>
   <header class="site-header">
-  <div class="container header-inner">
-    <h1 class="logo">MANIKANTA KALLURI</h1>
-    
-    <!-- Desktop nav - always visible -->
-    <nav class="nav desktop-nav" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    
-    <!-- Mobile hamburger - hidden by CSS -->
-    <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
-    <!-- Mobile menu dropdown - hidden by CSS -->
-    <nav class="nav mobile-nav" id="mobile-nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+    <div class="container header-inner">
+      <h1 class="logo">MANIKANTA KALLURI</h1>
+
+      <!-- Desktop nav -->
+      <nav class="nav desktop-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Mobile dropdown -->
+      <nav class="nav mobile-nav" id="mobile-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
+          <h2 class="hero-name">MANIKANTA</h2>
+          <h2 class="hero-name">KALLURI</h2>
 
-          <!-- BIG NAME -->
-          <p>
-            <h2 class="hero-name">MANIKANTA</h2>
-            <h2 class="hero-name">KALLURI</h2>
-          </p>
-
-          <!-- USERNAME -->
-          <!--<p class="hero-handle">Hi - I'm Manikanta Kalluri</p>-->
-
-          <!-- MOVING LINE -->
           <div class="header-ticker">
             <div class="ticker-track">
               <span>Java Developer | Technical Support</span>
               <span>Java Developer | Technical Support</span>
             </div>
           </div>
-<p>
-  
-</p>
-          
 
-          <!-- REMAINING CONTENT -->
           <p class="lead">
             Java Developer focused on enterprise backend systems, production support,
             and automation — debugging, optimizing SQL, and stabilizing systems under
@@ -79,18 +64,18 @@
           </p>
 
           <p>
-           <a class="btn btn-view"
-             href="assets/ManikantaKalluri_Resume.pdf"
-             target="_blank"
-             rel="noopener">
-                View Resume
+            <a class="btn btn-view"
+               href="assets/ManikantaKalluri_Resume.pdf"
+               target="_blank"
+               rel="noopener">
+              View Resume
             </a>
 
-           <a class="btn"
-             href="assets/ManikantaKalluri_Resume.pdf"
-             download="ManikantaKalluri_Resume.pdf">
-               Download Resume
-          </a>
+            <a class="btn"
+               href="assets/ManikantaKalluri_Resume.pdf"
+               download="ManikantaKalluri_Resume.pdf">
+              Download Resume
+            </a>
           </p>
         </div>
 
@@ -109,22 +94,22 @@
     <section id="about" class="section">
       <div class="container">
         <div class="about-layout">
-           <img class="about-avatar"
-            src="assets/My_Pic.png"
-           alt="Manikanta Kalluri profile photo">
-        <div>
-        <h3>About</h3>
-
-        <p>
-          I’m a Java Developer working on enterprise backend systems, production support,
-          and automation. I specialize in debugging Java applications, optimizing SQL
-          (Oracle & SQL Server), and stabilizing systems under real production pressure.
-        </p>
-
-        <p>
-          I work close to the metal — Linux, CI/CD pipelines, job automation (Stonebranch) —
-          fixing what breaks, improving what’s slow, and automating what shouldn’t be manual.
-        </p>
+          <img class="about-avatar"
+               src="assets/My_Pic.png"
+               alt="Manikanta Kalluri profile photo">
+          <div>
+            <h3>About</h3>
+            <p>
+              I’m a Java Developer working on enterprise backend systems, production support,
+              and automation. I specialize in debugging Java applications, optimizing SQL
+              (Oracle & SQL Server), and stabilizing systems under real production pressure.
+            </p>
+            <p>
+              I work close to the metal — Linux, CI/CD pipelines, job automation (Stonebranch) —
+              fixing what breaks, improving what’s slow, and automating what shouldn’t be manual.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -141,93 +126,85 @@
     </section>
 
     <section id="projects" class="section alt">
-  <div class="container">
-    <h3>Projects</h3>
-    <div class="grid">
+      <div class="container">
+        <h3>Projects</h3>
+        <div class="grid">
+          <div class="card">
+            <h4>Production Stability & Incident Reduction</h4>
+            <p>
+              Improved reliability of Java production systems by eliminating recurring failures and strengthening monitoring.
+            </p>
+            <ul>
+              <li>Debugged and fixed high-impact Java issues, significantly reducing repeat incidents.</li>
+              <li>Traced data issues using Oracle & SQL Server and validated fixes end-to-end.</li>
+              <li>Monitored jobs and services via Linux, Splunk, and Stonebranch to catch failures early.</li>
+              <li>Supported CI/CD releases and hotfix deployments with minimal production risk.</li>
+            </ul>
+          </div>
 
-      <div class="card">
-        <h4>Production Stability & Incident Reduction</h4>
-        <p>
-          Improved reliability of Java production systems by eliminating recurring failures and strengthening monitoring.
-        </p>
-        <ul>
-          <li>Debugged and fixed high-impact Java issues, significantly reducing repeat incidents.</li>
-          <li>Traced data issues using Oracle & SQL Server and validated fixes end-to-end.</li>
-          <li>Monitored jobs and services via Linux, Splunk, and Stonebranch to catch failures early.</li>
-          <li>Supported CI/CD releases and hotfix deployments with minimal production risk.</li>
-        </ul>
+          <div class="card">
+            <h4>SharePoint Portals & Backend Automation</h4>
+            <p>
+              Removed manual work by building structured portals and automating backend jobs.
+            </p>
+            <ul>
+              <li>Created SharePoint sites aligned with real user workflows and access controls.</li>
+              <li>Integrated OneDrive and standardized templates for consistent document handling.</li>
+              <li>Automated batch and backend tasks using Stonebranch scheduling.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4>Access Management & Bulk Operations</h4>
+            <p>
+              Ensured secure access and smooth large-scale data operations for business teams.
+            </p>
+            <ul>
+              <li>Managed user access and permissions while resolving access issues quickly.</li>
+              <li>Organized application folders to keep client and product data structured.</li>
+              <li>Handled bulk uploads and mass product updates without service disruption.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <div class="card">
-        <h4>SharePoint Portals & Backend Automation</h4>
-        <p>
-          Removed manual work by building structured portals and automating backend jobs.
-        </p>
-        <ul>
-          <li>Created SharePoint sites aligned with real user workflows and access controls.</li>
-          <li>Integrated OneDrive and standardized templates for consistent document handling.</li>
-          <li>Automated batch and backend tasks using Stonebranch scheduling.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h4>Access Management & Bulk Operations</h4>
-        <p>
-          Ensured secure access and smooth large-scale data operations for business teams.
-        </p>
-        <ul>
-          <li>Managed user access and permissions while resolving access issues quickly.</li>
-          <li>Organized application folders to keep client and product data structured.</li>
-          <li>Handled bulk uploads and mass product updates without service disruption.</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
     </section>
 
+    <section id="contact" class="section">
+      <div class="container">
+        <h3>Contact Me</h3>
 
-          <section id="contact" class="section">
-  <div class="container">
-    <h3>Contact Me</h3>
+        <form id="contact-form"
+              action="https://formsubmit.co/kallurimanikanta9@gmail.com"
+              method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
 
-    <form id="contact-form"
-          action="https://formsubmit.co/kallurimanikanta9@gmail.com"
-          method="POST">
+          <div class="field-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
 
-      <!-- FormSubmit options -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
+          <div class="field-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
 
-      <div class="field-row">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required>
+          <div class="field-row">
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel">
+          </div>
+
+          <div class="field-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button class="btn" type="submit">Send Message</button>
+
+          <p id="form-success" class="form-success">Message sent ✅</p>
+        </form>
       </div>
-
-      <div class="field-row">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required>
-      </div>
-
-      <div class="field-row">
-        <label for="phone">Phone (optional)</label>
-        <input id="phone" name="phone" type="tel">
-      </div>
-
-      <div class="field-row">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-      </div>
-
-      <button class="btn" type="submit">Send Message</button>
-
-      <!-- success animation text -->
-      <p id="form-success" class="form-success">Message sent ✅</p>
-    </form>
-  </div>
-</section>
-
-          
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -236,29 +213,44 @@
     </div>
   </footer>
 
-          <script>
-  const form = document.getElementById('contact-form');
-  const successMsg = document.getElementById('form-success');
+  <script>
+    // contact form
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // stop normal navigation
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
 
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-    })
-    .then(() => {
-      form.reset();
-      successMsg.classList.add('show');
-      setTimeout(() => successMsg.classList.remove('show'), 4000);
-    })
-    .catch(() => {
-      alert('Failed to send message. Please try again.');
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+      })
+      .then(() => {
+        form.reset();
+        successMsg.classList.add('show');
+        setTimeout(() => successMsg.classList.remove('show'), 4000);
+      })
+      .catch(() => {
+        alert('Failed to send message. Please try again.');
+      });
     });
-  });
-          </script>
-          
+
+    // mobile menu
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (menuBtn && mobileNav) {
+      menuBtn.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+      });
+
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+        });
+      });
+    }
+  </script>
 </body>
-        </html>
+            </html>
