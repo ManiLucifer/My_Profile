@@ -170,62 +170,48 @@
   </div>
     </section>
 
-          <script>
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-
-  const text =
-    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-
-  /* 1️⃣ SEND EMAIL USING FORMSPREE */
-  fetch("https://formspree.io/f/abcdwxyz", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      name,
-      email,
-      message
-    })
-  }).then(() => {
-    alert("Message sent successfully!");
-  });
-
-  /* 2️⃣ OPEN WHATSAPP WITH MESSAGE */
-  window.open(
-    `https://wa.me/919133022208?text=${encodeURIComponent(text)}`,
-    "_blank"
-  );
-
-  e.target.reset();
-});
-          </script>
-          
-<section id="contact" class="section">
+          <section id="contact" class="section">
   <div class="container">
     <h3>Contact</h3>
 
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="Your Message" required></textarea>
+    <form id="contact-form"
+          action="https://formsubmit.co/YOUR_EMAIL_HERE"
+          method="POST">
 
-      <button type="submit" class="btn">Contact Me</button>
+      <!-- FormSubmit options -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="field-row">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+
+      <div class="field-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+
+      <div class="field-row">
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="phone" type="tel">
+      </div>
+
+      <div class="field-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <button class="btn" type="submit">Send Message</button>
+
+      <!-- success animation text -->
+      <p id="form-success" class="form-success">Message sent ✅</p>
     </form>
-
-    <p class="contact-note">
-      Email: <a href="mailto:kallurimanikanta9@gmail.com">
-        kallurimanikanta9@gmail.com
-      </a>
-    </p>
   </div>
-</section>
+          </section>
 
+          
   </main>
 
   <footer class="site-footer">
@@ -233,5 +219,20 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       <p>&copy; 2025 Manikanta Kalluri</p>
     </div>
   </footer>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const successMsg = document.getElementById('form-success');
+
+  form.addEventListener('submit', function (e) {
+    // let the form really submit to FormSubmit:
+    // it will handle sending the email to your inbox. [web:254]
+    successMsg.classList.add('show');
+
+    // hide again after 4 seconds (optional)
+    setTimeout(() => successMsg.classList.remove('show'), 4000);
+  });
+</script>
+          
 </body>
-</html>
+        </html>
