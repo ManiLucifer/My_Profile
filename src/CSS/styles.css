@@ -68,14 +68,17 @@ body{
 .lead{color:var(--muted)}
 
 /* Header ticker */
-.header-ticker{
-  margin:1rem 0;
-  width:320px;
-  height:28px;
-  overflow:hidden;
-  border-radius:6px;
-  border:1px solid rgba(224,165,0,0.2);
+.header-ticker {
+  width: 320px;
+  height: 28px;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid rgba(224,165,0,0.2);
+  font-family: 'Orbitron', sans-serif;
+  color: var(--gold);
+  white-space: nowrap;
 }
+
 .ticker-track{
   display:flex;
   gap:48px;
