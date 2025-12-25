@@ -59,11 +59,11 @@ body{
   font-weight:700;
   font-family:'Orbitron', sans-serif;
   letter-spacing:0.6px;
-  color:var(--White);
+  color:var(--white);
 }
 
 .nav a{
-  color:var(--muted);
+  color:var(--white);
   text-decoration:none;
   margin-left:1rem;
   font-weight:600;
